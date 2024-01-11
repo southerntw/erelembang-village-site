@@ -1,0 +1,37 @@
+[
+  {
+    "dusunId": 1,
+    "nama": "Biring Panting",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 2,
+    "nama": "Bonto Manai",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 3,
+    "nama": "Bonto Rannu",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 4,
+    "nama": "Erelembang",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 5,
+    "nama": "Malenteng",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 6,
+    "nama": "Matteko",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  },
+  {
+    "dusunId": 7,
+    "nama": "Simbang",
+    "foto": "https://media.architecturaldigest.com/photos/64d3b62a35c3f404ca2efa62/16:9/w_2992,h_1683,c_limit/GettyImages-1319377120.jpg"
+  }
+]
