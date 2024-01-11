@@ -5,7 +5,7 @@ const dancingScript = Dancing_Script({ subsets: ["latin"] });
 export const Logo = () => {
   return (
     <div className="">
-      <p className="text-white font-extrabold">Erelembang</p>
+      <p className="text-white font-extrabold">Desa Erelembang</p>
     </div>
   );
 };

@@ -13,13 +13,17 @@ interface CardProps {
   foto: string;
 }
 
-export const dusunCard = ({ nama, foto }: CardProps) => {
+export const DusunCard = ({ nama, foto }: CardProps) => {
   return (
     <Card>
       <CardHeader>
-        <Image src={foto} fill={true} alt="Foto dusun" />
-        <CardTitle>{nama}</CardTitle>
+        <CardTitle>
+          <p className="font-light text-base">{nama}</p>
+        </CardTitle>
       </CardHeader>
+      <CardContent>
+        <Image src={foto} alt="Foto dusun" width={300} height={300} />
+      </CardContent>
     </Card>
   );
 };

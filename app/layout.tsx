@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Situs Desa Erelembang",
+  title: "Desa Erelembang | Website Desa Erelembang",
   description: "Selamat datang di Desa Erelembang!",
 };
 
