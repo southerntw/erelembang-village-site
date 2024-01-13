@@ -8,6 +8,7 @@ import { Navbar } from "./_components/navbar";
 
 export default function Home() {
   // TODO: Handle smaller screens, especially mobile!
+  // TODO: Change Dusun list font.
   return (
     <div className="bg-[url('/assets/home-banner-2.png')] bg-no-repeat bg-clip-content">
       <Navbar />
