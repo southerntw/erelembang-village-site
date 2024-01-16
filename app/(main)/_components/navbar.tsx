@@ -5,7 +5,11 @@ import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export const Navbar = () => {
+interface NavbarProps {
+  staticBar?: boolean;
+}
+
+export const Navbar = ({ staticBar }: NavbarProps) => {
   // TODO: Add hamburger bar for smaller screens.
   // TODO: When focused/active, make it into some color.
 
@@ -17,19 +21,23 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    // TODO: Refactor so it's better.
+    if (staticBar) {
+      setScrolled(true);
+    } else {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
+      window.addEventListener("scroll", handleScroll);
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
@@ -52,23 +60,9 @@ export const Navbar = () => {
             )}
           >
             <li>
-              <Link href="/pelayanan">
-                <p className=" text-sm font-bold hover:text-emerald-500">
-                  Pusat Pelayanan
-                </p>
-              </Link>
-            </li>
-            <li>
               <Link href="/profil">
                 <p className=" text-sm font-bold hover:text-emerald-500">
                   Profil
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/profil">
-                <p className=" text-sm font-bold hover:text-emerald-500">
-                  Destinasi Wisata
                 </p>
               </Link>
             </li>
