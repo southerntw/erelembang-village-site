@@ -43,20 +43,19 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
   return (
     <div
       className={cn(
-        "w-full h-20 z-50 bg-transparent sticky top-0 px-20 transition ease-in-out duration-300",
-        scrolled &&
-          "w-full h-20 z-50 bg-white sticky top-0 px-20 drop-shadow-md",
+        "w-full h-20 z-50 bg-transparent sticky top-0 px-6 transition ease-in-out duration-300",
+        scrolled && "w-full h-20 z-50 bg-emerald-700 sticky top-0 px-6",
       )}
     >
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
-          <Link href="/" className="pt-1 px-3 bg-emerald-700 rounded-sm ">
+          <Link href="/" className="pt-1 px-3 rounded-sm ">
             <Logo />
           </Link>
           <ul
             className={cn(
               "hidden md:flex gap-x-12 text-white transition ease-in-out duration-300",
-              scrolled && "text-black",
+              scrolled && "text-white",
             )}
           >
             <li>

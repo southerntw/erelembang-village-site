@@ -5,16 +5,16 @@ import { Wisata } from "./_components/wisata";
 import { Visit } from "./_components/visit";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
+import { Map } from "./_components/map";
 
 export default function Home() {
   // TODO: Handle smaller screens, especially mobile!
-  // TODO: Change Dusun list font.
   return (
     <div className="bg-[url('/assets/home-banner-2.png')] bg-no-repeat bg-clip-content">
       <Navbar />
       <Header />
       <Profil />
-      <Dusun />
+      <Map />
       <Wisata />
       <Visit />
       <Footer />
