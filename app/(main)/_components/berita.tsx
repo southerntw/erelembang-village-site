@@ -86,6 +86,7 @@ export const Berita = async () => {
         {data.posts.edges.map((edge, index) => (
           <DusunCard
             key={edge.node.title}
+            slug={edge.node.slug}
             nama={edge.node.title}
             foto={edge.node.extraPostInfo?.thumbImage?.node.mediaItemUrl}
           />

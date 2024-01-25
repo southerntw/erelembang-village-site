@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.9.0-rc.1",
+    "@apollo/client": "^3.9.0-alpha.5",
     "@apollo/experimental-nextjs-app-support": "^0.6.0",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",

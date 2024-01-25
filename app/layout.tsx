@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
+import { ApolloWrapper } from "@/lib/apollo-wrapper";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
     </html>
   );
 }
