@@ -73,6 +73,13 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
               </Link>
             </li>
             <li>
+              <Link href="/profil">
+                <p className=" text-sm font-bold hover:text-emerald-500">
+                  Berita
+                </p>
+              </Link>
+            </li>
+            <li>
               <Link href="/kontak">
                 <p className=" text-sm font-bold hover:text-emerald-500">
                   Kontak

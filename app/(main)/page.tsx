@@ -6,6 +6,7 @@ import { Visit } from "./_components/visit";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 import { Map } from "./_components/map";
+import { Berita } from "./_components/berita";
 
 export default function Home() {
   // TODO: Handle smaller screens, especially mobile!
@@ -14,7 +15,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Profil />
-      <Map />
+      <Berita />
       <Wisata />
       <Visit />
       <Footer />
