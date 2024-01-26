@@ -78,11 +78,11 @@ export const Berita = async () => {
     },
   });
   return (
-    <div className="pt-8 px-8 w-full pb-8">
+    <div className="bg-zinc-50 pt-8 px-8 sm:px-16 w-full pb-8">
       <h2 className="text-lg font-semibold pb-8 w-full text-center">
         Berita Terkini
       </h2>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {data.posts.edges.map((edge, index) => (
           <DusunCard
             key={edge.node.title}

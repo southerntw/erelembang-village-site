@@ -4,9 +4,9 @@ export const Header = () => {
   return (
     <div className="w-full h-[430px]">
       <div className="w-full h-2/3 items-center flex flex-col gap-8 justify-center pt-10">
-        <p className="text-white [text-shadow:1px_1px_2px_var(--tw-shadow-color)] text-3xl font-black">
+        <h2 className="text-white [text-shadow:1px_1px_2px_var(--tw-shadow-color)] text-3xl font-black text-center">
           Selamat datang di Desa Erelembang
-        </p>
+        </h2>
         <Button className="bg-emerald-700 hover:bg-emerald-900">
           Jelajahi Erelembang
         </Button>

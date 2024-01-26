@@ -7,6 +7,8 @@ import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
 import { Map } from "./_components/map";
 import { Berita } from "./_components/berita";
+import { Informasi } from "./_components/informasi";
+import { Galeri } from "./_components/galeri";
 
 export default function Home() {
   // TODO: Handle smaller screens, especially mobile!
@@ -16,7 +18,7 @@ export default function Home() {
       <Header />
       <Profil />
       <Berita />
-      <Wisata />
+      <Galeri />
       <Visit />
       <Footer />
     </div>
