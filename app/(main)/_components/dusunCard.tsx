@@ -13,20 +13,36 @@ interface CardProps {
   nama: string;
   foto: string;
   slug: string;
+  excerpt: string;
+  author: string;
 }
 
-export const DusunCard = ({ nama, foto, slug }: CardProps) => {
+export const DusunCard = ({ nama, foto, slug, excerpt, author }: CardProps) => {
   return (
     <Link href={`/berita/${slug}`}>
-      <Card>
+      <Card className="">
         <CardHeader>
-          <CardTitle>
-            <p className="font-light text-base">{nama}</p>
-          </CardTitle>
+          <Image
+            src={foto}
+            alt="Foto dusun"
+            width={300}
+            height={300}
+            className="rounded-xl mx-auto justify-center"
+          />
         </CardHeader>
         <CardContent>
-          <Image src={foto} alt="Foto dusun" width={300} height={300} />
+          <CardTitle>
+            <p className="text-base font-medium">{nama}</p>
+          </CardTitle>
+          <p className="text-sm mt-5 text-muted-foreground line-clamp-5">
+            {excerpt}
+          </p>
         </CardContent>
+        <CardFooter>
+          <div className="grid grid-cols-2">
+            <p className="text-xs text-zinc-400 capitalize">oleh {author}</p>
+          </div>
+        </CardFooter>
       </Card>
     </Link>
   );

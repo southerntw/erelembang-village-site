@@ -4,6 +4,14 @@ import { Logo } from "./logo";
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Merriweather } from "next/font/google";
+
+const merriweather = Merriweather({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 interface NavbarProps {
   staticBar?: boolean;

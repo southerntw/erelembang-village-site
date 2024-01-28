@@ -16,9 +16,8 @@ export default function Home() {
     <div className="bg-[url('/assets/home-banner-2.png')] bg-no-repeat bg-clip-content">
       <Navbar />
       <Header />
-      <Profil />
+      <Profil className="" />
       <Berita />
-      <Galeri />
       <Visit />
       <Footer />
     </div>

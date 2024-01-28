@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Inter, Roboto, Open_Sans } from "next/font/google";
 import { ApolloWrapper } from "@/lib/apollo-wrapper";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({
-  weight: ["400", "700"],
+const roboto = Open_Sans({
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -23,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={montserrat.className}>
         <ApolloWrapper>{children}</ApolloWrapper>
       </body>
     </html>

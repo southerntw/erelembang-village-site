@@ -7,7 +7,7 @@ export const Logo = () => {
     <div className="flex flex-row ">
       <img src="./assets/logo.png" className="h-12 w-12" />
       <p className="text-white w-20 leading-tight my-auto ml-5">
-        Situs Desa <b>Erelembang</b>
+        Desa <b>Erelembang</b>
       </p>
     </div>
   );
