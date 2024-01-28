@@ -13,7 +13,7 @@ import { Galeri } from "./_components/galeri";
 export default function Home() {
   // TODO: Handle smaller screens, especially mobile!
   return (
-    <div className="bg-[url('/assets/home-banner-2.png')] bg-no-repeat bg-clip-content">
+    <div className="bg-[url('/assets/home-banner-1.png')] bg-no-repeat bg-clip-content">
       <Navbar />
       <Header />
       <Profil className="" />

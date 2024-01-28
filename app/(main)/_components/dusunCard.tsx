@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -8,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import DOMPurify from "isomorphic-dompurify";
 
 interface CardProps {
   nama: string;
@@ -18,6 +21,14 @@ interface CardProps {
 }
 
 export const DusunCard = ({ nama, foto, slug, excerpt, author }: CardProps) => {
+  const sanitizedExcerpt = DOMPurify.sanitize(excerpt, {
+    USE_PROFILES: { html: false },
+  });
+
+  useEffect(() => {
+    console.log(sanitizedExcerpt);
+  });
+
   return (
     <Link href={`/berita/${slug}`}>
       <Card className="">
@@ -35,7 +46,7 @@ export const DusunCard = ({ nama, foto, slug, excerpt, author }: CardProps) => {
             <p className="text-base font-medium">{nama}</p>
           </CardTitle>
           <p className="text-sm mt-5 text-muted-foreground line-clamp-5">
-            {excerpt}
+            {sanitizedExcerpt}
           </p>
         </CardContent>
         <CardFooter>

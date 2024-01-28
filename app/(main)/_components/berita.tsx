@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 import { DusunCard } from "./dusunCard";
 import { Dusun } from "./dusun";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 interface Edge {
   node: Node;
@@ -90,10 +91,14 @@ export const Berita = async () => {
   });
   return (
     <div className="flex flex-col bg-zinc-50 pt-8 px-8 sm:px-16 w-full pb-8">
-      <h2 className="text-lg font-semibold pb-8 w-full text-center">
-        Berita Terkini
+      <h2 className="text-xl font-semibold pb-2 w-full text-center">
+        Pusat Informasi
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 justify-between gap-4 pb-8">
+      <p className="text-sm text-muted-foreground text-center pb-2">
+        Berita terkini dari Desa Erelembang
+      </p>
+      <Separator className="mb-8 w-10 mx-auto" />
+      <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center justify-between gap-4 pb-8">
         {data.posts.edges.slice(0, 6).map((edge, index) => (
           <DusunCard
             key={edge.node.title}

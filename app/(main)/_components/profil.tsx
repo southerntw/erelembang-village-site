@@ -26,11 +26,11 @@ export const Profil = () => {
             <i>Erelembang</i> berasal dari Bahasa Konjo yang terdiri dari 'Ere'
             yang berarti sungai dan 'Lembang' yang berarti lembah. Desa
             Erelembang merupakan sebuah kawasan yang memikat hati dengan
-            pesonanya yang alami dan keindahan alamnya yang menakjubkan.
-            Terletak di tepi perbukitan, desa ini dikelilingi oleh perkebunan,
-            perbukitan, dan hutan pinus yang membentang sejauh mata memandang.
-            Erelembang tidak hanya menawarkan keindahan alam, tetapi juga
-            kehangatan masyarakatnya yang ramah dan bersahaja.{" "}
+            pesonanya yang alami dan keindahan alamnya yang menakjubkan. Desa
+            ini diisi oleh perkebunan, perbukitan, dan hutan pinus yang
+            membentang sejauh mata memandang. Erelembang tidak hanya menawarkan
+            keindahan alam, tetapi juga kehangatan masyarakatnya yang ramah dan
+            bersahaja.{" "}
           </p>
           <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:w-5/6">
             <div className="h-full flex items-center justify-start">
@@ -39,38 +39,42 @@ export const Profil = () => {
                 alt="foto pemandangan"
                 width={400}
                 height={400}
-                className="rounded-xl"
+                className="rounded-xl shadow-xl"
               />
             </div>
             <div className="h-full flex flex-col align-middle justify-center gap-3 ">
               <h1 className="text-xl font-bold ">Informasi Geografis</h1>
-              <Separator className="mb-3 w-5" />
-              <p>Terletak di Kecamatan Tombolo Pao, Kabupaten Gowa.</p>
-              <p>Berbatasan dengan Kabupaten Bone dan Kabupaten Maros.</p>
-              <p>
-                Luas wilayah Desa Erelembang mencapai 59,84 km², menjadikannya
-                desa terluas di Kabupaten Gowa.
-              </p>
+              <Separator className="mb-2 w-5" />
+              <ul className="px-4 list-disc space-y-2 text-zinc-700">
+                <li>Terletak di Kecamatan Tombolo Pao, Kabupaten Gowa.</li>
+                <li>Berbatasan dengan Kabupaten Bone dan Kabupaten Maros.</li>
+                <li>
+                  Luas wilayah Desa Erelembang mencapai 59,84 km², menjadikannya
+                  desa terluas di Kabupaten Gowa.
+                </li>
+              </ul>
             </div>
           </div>
           <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:w-5/6">
             <div className="h-full flex flex-col justify-center gap-3 ">
-              <h1 className="text-xl font-bold">
+              <h1 className="text-xl font-bold ">
                 Topografi dan Keindahan Alam
               </h1>
               <Separator className="mb-3 w-5" />
-              <p>
-                Menawarkan keindahan perbukitan, hutan, dan dataran tinggi yang
-                memukau
-              </p>
-              <p>
-                Dikelilingi oleh perkebunan dan perbukitan yang melahirkan
-                pemandangan spektakuler.
-              </p>
-              <p>
-                Destinasi wisata yang potensial dengan udara sejuk dan
-                pemandangan alam yang indah.
-              </p>
+              <ul className="px-4 list-disc space-y-2 text-zinc-700">
+                <li>
+                  Menawarkan keindahan perbukitan, hutan, dan dataran tinggi
+                  yang memukau.
+                </li>
+                <li>
+                  Dikelilingi oleh perkebunan dan perbukitan yang melahirkan
+                  pemandangan spektakuler.
+                </li>
+                <li>
+                  Destinasi wisata yang potensial dengan udara sejuk dan
+                  pemandangan alam yang indah.
+                </li>
+              </ul>
             </div>
             <div className="h-full flex items-center justify-end">
               <Image
@@ -78,7 +82,7 @@ export const Profil = () => {
                 alt="foto pemandangan"
                 width={400}
                 height={400}
-                className="rounded-xl"
+                className="rounded-xl shadow-xl"
               />
             </div>
           </div>
