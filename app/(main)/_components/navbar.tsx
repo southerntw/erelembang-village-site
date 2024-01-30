@@ -67,23 +67,16 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
             )}
           >
             <li>
-              <Link href="/profil">
-                <p className=" text-sm font-bold hover:text-emerald-500">
-                  Profil
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/profil">
-                <p className=" text-sm font-bold hover:text-emerald-500">
-                  Galeri
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/profil">
+              <Link href="/berita">
                 <p className=" text-sm font-bold hover:text-emerald-500">
                   Berita
+                </p>
+              </Link>
+            </li>
+            <li>
+              <Link href="/struktur">
+                <p className=" text-sm font-bold hover:text-emerald-500">
+                  Struktur Organisasi
                 </p>
               </Link>
             </li>

@@ -58,7 +58,7 @@ const query = gql`
   }
 `;
 
-export default function Berita() {
+export default function BeritaSlug() {
   const params = useParams();
   const { data } = useSuspenseQuery(query, {
     variables: {

@@ -31,7 +31,7 @@ export const DusunCard = ({ nama, foto, slug, excerpt, author }: CardProps) => {
 
   return (
     <Link href={`/berita/${slug}`}>
-      <Card className="">
+      <Card className="hover:bg-zinc-100">
         <CardHeader>
           <Image
             src={foto}
