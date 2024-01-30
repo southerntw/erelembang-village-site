@@ -25,10 +25,6 @@ export const DusunCard = ({ nama, foto, slug, excerpt, author }: CardProps) => {
     USE_PROFILES: { html: false },
   });
 
-  useEffect(() => {
-    console.log(sanitizedExcerpt);
-  });
-
   return (
     <Link href={`/berita/${slug}`}>
       <Card className="hover:bg-zinc-100">

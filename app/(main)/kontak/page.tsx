@@ -1,19 +1,18 @@
 "use client";
 import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
-
+import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export default function Kontak() {
   return (
     <div className="flex flex-col min-h-screen justify-between">
       <Navbar staticBar={true} />
       <div className="mb-auto py-8">
-        <h2 className="text-2xl font-semibold mb-10 w-full text-center">
+        <h2 className="text-2xl font-semibold mb-2 w-full text-center">
           Hubungi Kami
         </h2>
+        <Separator className="mb-8 w-10 mx-auto" />
         <div className="sm:w-3/4 grid grid-cols-3 gap-6 mx-auto">
           <div className="col-span-2">
             <form>

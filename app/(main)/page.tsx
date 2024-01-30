@@ -5,7 +5,7 @@ import { Wisata } from "./_components/wisata";
 import { Visit } from "./_components/visit";
 import { Footer } from "./_components/footer";
 import { Navbar } from "./_components/navbar";
-import { Map } from "./_components/map";
+import { GoogleMap } from "./_components/googleMap";
 import { Berita } from "./_components/berita";
 import { Informasi } from "./_components/informasi";
 import { Galeri } from "./_components/galeri";
@@ -16,7 +16,7 @@ export default function Home() {
     <div className="bg-[url('/assets/home-banner-1.png')] bg-no-repeat bg-clip-content">
       <Navbar />
       <Header />
-      <Profil className="" />
+      <Profil />
       <Berita />
       <Visit />
       <Footer />
