@@ -22,9 +22,32 @@ export const GoogleMap = () => {
       const { Map } = (await google.maps.importLibrary(
         "maps",
       )) as google.maps.MapsLibrary;
+      const { AdvancedMarkerElement, PinElement } =
+        (await google.maps.importLibrary(
+          "marker",
+        )) as google.maps.MarkerLibrary;
+
       map = new Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        center: { lat: -5.153022216009128, lng: 119.8995287133637 },
+        zoom: 15,
+        mapId: "4504f8b37365c3d0",
+        streetViewControl: false,
+        mapTypeControlOptions: {
+          mapTypeIds: ["satellite"],
+        },
+      });
+
+      const pinElement = new PinElement({
+        background: "#047857",
+        borderColor: "#047857",
+        glyphColor: "#fde68a",
+      });
+
+      const marker = new AdvancedMarkerElement({
+        map,
+        position: { lat: -5.153022216009128, lng: 119.8995287133637 },
+        title: `Kantor Desa Erelembang`,
+        content: pinElement.element,
       });
     });
   });
