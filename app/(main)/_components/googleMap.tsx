@@ -2,6 +2,12 @@
 import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useState, useRef } from "react";
 
+interface GoogleMapProps {
+  location: latlng;
+}
+
+interface latlng {}
+
 export const GoogleMap = () => {
   let map: google.maps.Map;
 

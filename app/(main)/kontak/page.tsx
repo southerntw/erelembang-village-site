@@ -3,6 +3,7 @@ import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { GoogleMap } from "@/app/(main)/_components/googleMap";
 
 export default function Kontak() {
   return (
@@ -56,13 +57,21 @@ export default function Kontak() {
               </Button>
             </form>
           </div>
-          <div className="justify-end">
+          <div>
             <h1 className="font-bold mb-2 text-sm block">Lokasi</h1>
-            <p className="text-sm leading-relaxed ">
+            <p className="text-sm leading-relaxed mb-2">
               Kantor Desa Erelembang. <br />
               Dusun Erelembang, Desa Erelembang, Kec. Tombolo Pao, Kabupaten
               Gowa, Sulawesi Selatan 92171, Indonesia.
             </p>
+            <div className="w-full h-[240px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15894.74031128033!2d119.8993545!3d-5.154284099999988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbe91c735b28afb%3A0xd197d6205f1b08a4!2sKantor%20Desa%20Erelembang!5e0!3m2!1sen!2sid!4v1706694848282!5m2!1sen!2sid"
+                allowFullScreen={true}
+                loading="lazy"
+                className="w-full h-full rounded-xl"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
