@@ -99,7 +99,7 @@ export const Berita = async () => {
         Berita terkini dari Desa Erelembang
       </p>
       <Separator className="mb-8 w-10 mx-auto" />
-      <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center justify-between gap-4 pb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 place-items-center justify-between gap-4 pb-8">
         {data.posts.edges.slice(0, 6).map((edge, index) => (
           <DusunCard
             key={edge.node.title}

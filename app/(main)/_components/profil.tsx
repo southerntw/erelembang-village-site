@@ -22,7 +22,7 @@ const openSans = Open_Sans({
 export const Profil = () => {
   return (
     <div>
-      <div className="px-16 w-full pb-16 ">
+      <div className="px-4 sm:px-16 w-full pb-16 ">
         <div className="flex flex-col gap-24 items-center justify-center">
           <p className="w-full sm:w-3/4 text-center leading-loose mt-4 py-4 px-8 bg-zinc-50 rounded-xl">
             <i>Erelembang</i> berasal dari Bahasa Konjo yang terdiri dari 'Ere'

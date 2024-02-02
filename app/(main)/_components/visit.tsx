@@ -11,7 +11,7 @@ export const Visit = () => {
         Tekan nama dusun pada peta untuk melihat deskripsi
       </p>
       <Separator className="mb-8 w-10 mx-auto" />
-      <div className="mx-auto sm:w-3/4 h-[280px] ">
+      <div className="sm:mx-auto w-dvh sm:w-3/4 h-[280px] ">
         <GoogleMap />
       </div>
     </div>
