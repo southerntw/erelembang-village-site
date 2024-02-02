@@ -81,7 +81,7 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
               </Link>
             </li>
             <li>
-              <Link href="/struktur">
+              <Link href="/peta">
                 <p className=" text-sm font-bold hover:text-emerald-500">
                   Peta Interaktif
                 </p>

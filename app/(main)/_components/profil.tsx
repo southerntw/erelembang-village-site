@@ -1,8 +1,10 @@
 import { Poppins } from "next/font/google";
-import { Map } from "./map";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { Montserrat, Open_Sans } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import { useDialog } from "@/hooks/use-dialog";
+import { DusunDialog } from "./dusunDialog";
 
 const montserrat = Montserrat({
   weight: ["400", "700"],
@@ -47,6 +49,8 @@ export const Profil = () => {
               <Separator className="mb-2 w-5" />
               <ul className="px-4 list-disc space-y-2 text-zinc-700">
                 <li>Terletak di Kecamatan Tombolo Pao, Kabupaten Gowa.</li>
+
+                <li>Terdiri atas 7 dusun.</li>
                 <li>Berbatasan dengan Kabupaten Bone dan Kabupaten Maros.</li>
                 <li>
                   Luas wilayah Desa Erelembang mencapai 59,84 km², menjadikannya
