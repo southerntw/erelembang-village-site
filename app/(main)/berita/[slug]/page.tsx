@@ -4,11 +4,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
-import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
+import { gql, useSuspenseQuery, TypedDocumentNode } from "@apollo/client";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
 
 interface Post {
   title: string;
@@ -36,7 +34,7 @@ interface Node {
   name?: string;
 }
 
-const query = gql`
+const query: TypedDocumentNode = gql`
   query PostBySlug($id: ID!, $idType: PostIdType!) {
     post(id: $id, idType: $idType) {
       title

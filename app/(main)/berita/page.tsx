@@ -101,7 +101,7 @@ export default async function Berita() {
         </h2>
         <Separator className="mb-8 w-10 mx-auto" />
         <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center justify-between gap-4 pb-8">
-          {data.posts.edges.map((edge, index) => (
+          {data.posts.edges.map((edge: any, _index: any) => (
             <DusunCard
               key={edge.node.title}
               slug={edge.node.slug}
