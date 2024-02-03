@@ -10,7 +10,6 @@ module.exports = {
         protocol: "https",
         hostname: "erelembang.000webhostapp.com",
       },
-      ,
     ],
   },
 };
