@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
-import { gql, useSuspenseQuery, TypedDocumentNode } from "@apollo/client";
+import { gql, TypedDocumentNode } from "@apollo/client";
+import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 
@@ -34,7 +35,7 @@ interface Node {
   name?: string;
 }
 
-const query: TypedDocumentNode = gql`
+const query = gql`
   query PostBySlug($id: ID!, $idType: PostIdType!) {
     post(id: $id, idType: $idType) {
       title
