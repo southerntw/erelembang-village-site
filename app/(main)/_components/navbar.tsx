@@ -1,19 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { Logo } from "./logo";
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Merriweather } from "next/font/google";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MobileMenu } from "./mobileMenu";
-
-const merriweather = Merriweather({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 interface NavbarProps {
   staticBar?: boolean;
@@ -27,13 +19,16 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
     setIsOpen(!isOpen);
   };
 
+  let dynamic = false;
+  if (!staticBar) {
+    dynamic = true;
+  }
+
   const [scrolled, setScrolled] = useState(staticBar);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // TODO: Refactor so it's better.
-    if (staticBar) {
-      setScrolled(true);
-    } else {
+    if (dynamic) {
       const handleScroll = () => {
         if (window.scrollY > 0) {
           setScrolled(true);
@@ -43,13 +38,7 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
       };
       window.addEventListener("scroll", handleScroll);
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-
-    if (isOpen) {
-      setScrolled(true);
+      handleScroll();
     }
   }, []);
 

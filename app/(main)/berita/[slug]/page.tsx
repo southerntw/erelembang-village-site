@@ -88,9 +88,9 @@ export default function BeritaSlug() {
     console.log(sanitizedContent);
   }, []);
   return (
-    <main>
+    <main className="flex flex-col min-h-screen justify-between">
       <Navbar staticBar={true} />
-      <div className="flex flex-col w-full items-center align-middle py-16 px-4 md:px-0">
+      <div className="flex flex-col w-full mb-auto items-center align-middle py-16 px-4 md:px-0">
         <div className="justify-center sm:w-[728px]">
           <div className="flex flex-col pb-8 ">
             <div className="relative w-full h-[368px]">
@@ -112,7 +112,7 @@ export default function BeritaSlug() {
           ></div>
         </div>
       </div>
-      <Footer className="mt-auto" />
+      <Footer />
     </main>
   );
 }

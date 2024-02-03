@@ -1,7 +1,6 @@
 import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 import { GoogleMap } from "@/app/(main)/_components/googleMap";
 
 export default function Kontak() {

@@ -93,9 +93,9 @@ export default async function Berita() {
     },
   });
   return (
-    <div>
+    <div className="flex flex-col min-h-screen justify-between">
       <Navbar staticBar={true} />
-      <div className="flex flex-col pt-8 px-8 sm:px-16 w-full pb-8">
+      <div className="flex flex-col mb-auto pt-8 px-8 sm:px-16 w-full pb-8">
         <h2 className="text-3xl font-semibold pb-2 w-full text-center">
           Berita Terkini
         </h2>
