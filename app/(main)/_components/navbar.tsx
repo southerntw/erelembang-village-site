@@ -27,7 +27,7 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
     setIsOpen(!isOpen);
   };
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(staticBar);
 
   useEffect(() => {
     // TODO: Refactor so it's better.

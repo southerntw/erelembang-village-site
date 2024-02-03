@@ -13,15 +13,11 @@ import { DusunDialog } from "./_components/dusunDialog";
 import { useDialog } from "@/hooks/use-dialog";
 
 export default function Home() {
-  // TODO: Handle smaller screens, especially mobile!
-  //
-
   return (
     <div className="bg-[url('/assets/home-banner-1.png')] bg-no-repeat bg-clip-content">
       <Navbar />
       <Header />
       <Profil />
-      <Wisata />
       <Berita />
       <Visit />
       <Footer />
