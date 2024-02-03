@@ -35,7 +35,7 @@ interface Node {
   name?: string;
 }
 
-const query = gql`
+const query: TypedDocumentNode = gql`
   query PostBySlug($id: ID!, $idType: PostIdType!) {
     post(id: $id, idType: $idType) {
       title
