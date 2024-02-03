@@ -20,6 +20,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ staticBar }: NavbarProps) => {
+  // TODO: Add hamburger bar for smaller screens.
   // TODO: When focused/active, make it into some color.
 
   const [isOpen, setIsOpen] = useState(false);
