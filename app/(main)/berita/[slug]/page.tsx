@@ -90,7 +90,7 @@ export default function BeritaSlug() {
   return (
     <main>
       <Navbar staticBar={true} />
-      <div className="flex flex-col w-full items-center align-middle py-16">
+      <div className="flex flex-col w-full items-center align-middle py-16 px-4 md:px-0">
         <div className="justify-center sm:w-[728px]">
           <div className="flex flex-col pb-8 ">
             <div className="relative w-full h-[368px]">
@@ -110,8 +110,6 @@ export default function BeritaSlug() {
             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
             className="leading-7 flex flex-col gap-y-4 object-cover articleContent"
           ></div>
-          <Separator className="mt-8" />
-          <h3 className="mt-8 font-medium">Bagikan artikel ini</h3>
         </div>
       </div>
       <Footer className="mt-auto" />

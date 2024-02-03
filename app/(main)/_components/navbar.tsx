@@ -5,6 +5,8 @@ import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Merriweather } from "next/font/google";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MobileMenu } from "./mobileMenu";
 
 const merriweather = Merriweather({
   weight: ["400", "700"],
@@ -23,7 +25,7 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
-    setIsOpen(isOpen);
+    setIsOpen(!isOpen);
   };
 
   const [scrolled, setScrolled] = useState(false);
@@ -46,63 +48,73 @@ export const Navbar = ({ staticBar }: NavbarProps) => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
+
+    if (isOpen) {
+      setScrolled(true);
+    }
   }, []);
 
   return (
     <div
       className={cn(
-        "w-full h-20 z-50 bg-transparent sticky top-0 px-6 transition ease-in-out duration-300",
-        scrolled && "w-full h-20 z-50 bg-emerald-700 sticky top-0 px-6",
+        "w-full h-20 z-50 bg-transparent sticky top-0 lg:px-6 transition ease-in-out duration-300",
+        scrolled && "w-full h-20 z-50 bg-emerald-700 sticky top-0 md:px-6",
       )}
     >
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
-          <Link href="/" className="pt-1 px-3 rounded-sm ">
+          <Link href="/" className="pt-1 lg:px-3 lg:mx-0 rounded-sm ">
             <Logo />
           </Link>
           <ul
             className={cn(
-              "hidden md:flex gap-x-12 text-white transition ease-in-out duration-300",
+              "flex gap-x-12 text-white transition ease-in-out duration-300",
               scrolled && "text-white",
             )}
           >
             <li>
               <Link href="/">
-                <p className=" text-sm font-bold hover:text-emerald-500">
+                <p className="hidden lg:flex text-sm font-bold hover:text-emerald-500">
                   Halaman Utama
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/berita">
-                <p className=" text-sm font-bold hover:text-emerald-500">
+                <p className="hidden lg:flex text-sm font-bold hover:text-emerald-500">
                   Berita
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/peta">
-                <p className=" text-sm font-bold hover:text-emerald-500">
+                <p className="hidden lg:flex text-sm font-bold hover:text-emerald-500">
                   Peta Interaktif
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/struktur">
-                <p className=" text-sm font-bold hover:text-emerald-500">
+                <p className="hidden lg:flex text-sm font-bold hover:text-emerald-500">
                   Struktur Organisasi
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/kontak">
-                <p className=" text-sm font-bold hover:text-emerald-500">
+                <p className="hidden lg:flex text-sm font-bold hover:text-emerald-500">
                   Kontak
                 </p>
               </Link>
             </li>
+            <li className="lg:hidden pt-3" onClick={toggle}>
+              <p className="text-xl font-bold hover:text-emerald-500">
+                <GiHamburgerMenu />
+              </p>
+            </li>
           </ul>
         </div>
+        <MobileMenu isOpen={isOpen} />
       </div>
     </div>
   );

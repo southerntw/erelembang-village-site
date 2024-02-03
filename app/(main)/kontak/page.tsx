@@ -14,7 +14,7 @@ export default function Kontak() {
           Hubungi Kami
         </h2>
         <Separator className="mb-8 w-10 mx-auto" />
-        <div className="sm:w-3/4 grid grid-cols-3 gap-6 mx-auto">
+        <div className="sm:w-3/4 md:grid md:grid-cols-3 md:gap-6 flex flex-col gap-6 mx-auto px-4 md:px-0">
           <div className="col-span-2">
             <form>
               <div className="mb-4">
@@ -58,7 +58,9 @@ export default function Kontak() {
             </form>
           </div>
           <div>
-            <h1 className="font-bold mb-2 text-sm block">Lokasi</h1>
+            <h1 className="font-bold mb-2 text-sm text-center md:text-start">
+              Lokasi
+            </h1>
             <p className="text-sm leading-relaxed mb-2">
               Kantor Desa Erelembang. <br />
               Dusun Erelembang, Desa Erelembang, Kec. Tombolo Pao, Kabupaten

@@ -35,7 +35,7 @@ export const Profil = () => {
             bersahaja.{" "}
           </p>
           <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:w-5/6">
-            <div className="h-full flex items-center justify-start">
+            <div className="h-full flex items-center justify-center md:justify-start">
               <Image
                 src="/assets/picture-1.jpg"
                 alt="foto pemandangan"
@@ -80,7 +80,7 @@ export const Profil = () => {
                 </li>
               </ul>
             </div>
-            <div className="h-full flex items-center justify-end">
+            <div className="h-full flex items-center justify-center md:justify-end">
               <Image
                 src="/assets/picture-2.jpeg"
                 alt="foto pemandangan"
