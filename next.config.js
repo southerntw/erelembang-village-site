@@ -6,6 +6,11 @@ module.exports = {
         protocol: "http",
         hostname: "localhost",
       },
+      {
+        protocol: "https",
+        hostname: "erelembang.000webhostapp.com",
+      },
+      ,
     ],
   },
 };
