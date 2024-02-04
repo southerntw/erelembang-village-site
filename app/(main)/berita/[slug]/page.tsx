@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useParams } from "next/navigation";
 import { Navbar } from "@/app/(main)/_components/navbar";
 import { Footer } from "@/app/(main)/_components/footer";
@@ -66,7 +66,7 @@ export default function BeritaSlug() {
     },
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 10 },
       },
     },
   });
@@ -91,24 +91,26 @@ export default function BeritaSlug() {
       <Navbar staticBar={true} />
       <div className="flex flex-col w-full mb-auto items-center align-middle py-16 px-4 md:px-0">
         <div className="justify-center sm:w-[728px]">
-          <div className="flex flex-col pb-8 ">
-            <div className="relative w-full h-[368px]">
-              <Image
-                src={post.extraPostInfo.thumbImage?.node.mediaItemUrl ?? ""}
-                alt="thumbnail image"
-                fill
-                className="mx-auto rounded-xl object-cover"
-              />
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className="flex flex-col pb-8 ">
+              <div className="relative w-full h-[368px]">
+                <Image
+                  src={post.extraPostInfo.thumbImage?.node.mediaItemUrl ?? ""}
+                  alt="thumbnail image"
+                  fill
+                  className="mx-auto rounded-xl object-cover"
+                />
+              </div>
+              <h1 className="font-medium text-2xl pt-6 pb-2">{post.title}</h1>
+              <p className="text-sm text-muted-foreground pb-4 capitalize">
+                {formattedDate} - oleh {post.author.node.name}
+              </p>
             </div>
-            <h1 className="font-medium text-2xl pt-6 pb-2">{post.title}</h1>
-            <p className="text-sm text-muted-foreground pb-4 capitalize">
-              {formattedDate} - oleh {post.author.node.name}
-            </p>
-          </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-            className="leading-7 flex flex-col gap-y-4 object-cover articleContent"
-          ></div>
+            <div
+              dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+              className="leading-7 flex flex-col gap-y-4 object-cover articleContent"
+            ></div>
+          </Suspense>
         </div>
       </div>
       <Footer />
